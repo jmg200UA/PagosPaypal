@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
-let libroSchema = new mongoose.Schema({
-    titulo: {
+let compraSchema = new mongoose.Schema({
+    nombre: { // Nombre de la compra
         type: String,
         required: true,
         minlength: 3,
         trim: true
     },
-    editorial: {
+    pago: { // id del pago
         type: String
     },
     precio: {
@@ -17,5 +17,5 @@ let libroSchema = new mongoose.Schema({
     }
 });
 
-let Libro = mongoose.model('librosV1', libroSchema);
-module.exports = Libro;
+let Compra = mongoose.model('compras', compraSchema);
+module.exports = Compra;
